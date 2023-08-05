@@ -25,6 +25,24 @@ function addBookToLibrary() {
     console.log(myLibrary);
 }
 
+function renderCard() {
+    let cardSection = document.getElementById('card-container');
+    cardSection.innerHTML = '';
+
+    for(let i = 0; i < myLibrary.length; i++) {
+        let book = myLibrary[i];
+        let bookCard = document.createElement('div');
+        bookCard.setAttribute('class', 'card');
+        bookCard.innerHTML = `
+            <h1 class="card__title"></h1>
+            <h2 class="card__author">Chuck Palahniuk</h2>
+            <h2 class="card__pages">208</h2>
+            <h2 class="card__read">Read</h2>
+            <button class="btn">Remove</button>
+        `
+    }
+
+}
 
 const container = document.querySelector('#container');   
 
