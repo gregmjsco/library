@@ -15,21 +15,19 @@
         <button class="btn">Add Book</button>
     </header>
     
-    <form action="" method="post">
-        <label for="book-title">Book title:</label>
-        <input type="text" id="book-title" name="book-title">
-
-        <label for="book-author">Author:</label>
-        <input type="text" id="book-author" name="book-author">
-
-        <label for="book-pages">Pages:</label>
-        <input type="number" id="book-pages" name="book-pages">
-
-        <label for="book-read">Read:</label>
-        <input type="checkbox" name="book-read" id="book-read" checked>
-
-        <button type="submit">Add Book</button>
-    </form>
+    <div class="form">
+        <form action="" method="post">
+            <label for="book-title">Book title:</label>
+            <input type="text" id="book-title" name="book-title" placeholder="Title.." required>
+            <label for="book-author">Author:</label>
+            <input type="text" id="book-author" name="book-author" placeholder="Author.." required>
+            <label for="book-pages">Pages:</label>
+            <input type="number" id="book-pages" name="book-pages" placeholder="102" required>
+            <label for="book-read">Read:</label>
+            <input type="checkbox" name="book-read" id="book-read" checked>
+            <button type="button">Add Book</button>
+        </form>
+    </div>
 
     <div id="card-container">
         <div class="card">

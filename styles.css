@@ -28,6 +28,11 @@ button {
     display: flex;
 }
 
+.form {
+    width: 500px;
+    margin: 0 auto;
+}
+
 .card {
     width: 300px;
     background-color: #000;
