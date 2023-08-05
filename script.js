@@ -15,19 +15,16 @@ Book.prototype.showInfo = function() {
 
 function addBookToLibrary() {
     let titleValue = document.getElementById('book-title').value;
-    let author = prompt('Name of Author', 'TestBookAuthor');
-    let pages = prompt('Number of Pages', 200);
-    let read = prompt('Read book?', 'Read');
+    let authorValue = document.getElementById('book-author').value;
+    let pagesValue = document.getElementById('book-pages').value;
+    let readValue = document.getElementById('book-read').value;
 
-    let bookToAdd = new Book(titleValue, author, pages, read);
+
+    let bookToAdd = new Book(titleValue, authorValue, pagesValue, readValue);
     myLibrary.push(bookToAdd);
     console.log(myLibrary);
 }
 
-const testBook = new Book('The Walk', 'Misa', 342, 'is read');
-myLibrary.push(testBook);
-
-console.log(myLibrary);
 
 const container = document.querySelector('#container');   
 
