@@ -24,8 +24,13 @@ button {
     margin: 0 auto;
 }
 
-#container {
+#card-container {
     display: flex;
+    width: 800px;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .form {
