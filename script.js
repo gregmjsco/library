@@ -8,7 +8,7 @@ function Book (title, author, pages, read) {
 Book.prototype.showInfo = function() {
     let info = `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
     return info;
-}
+};
 
 const testBook = new Book('The Win', 'Misa', 342, 'is read');
 
