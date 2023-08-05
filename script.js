@@ -23,6 +23,7 @@ function addBookToLibrary() {
     let bookToAdd = new Book(titleValue, authorValue, pagesValue, readValue);
     myLibrary.push(bookToAdd);
     console.log(myLibrary);
+    renderCard();
 }
 
 function renderCard() {
@@ -34,12 +35,13 @@ function renderCard() {
         let bookCard = document.createElement('div');
         bookCard.setAttribute('class', 'card');
         bookCard.innerHTML = `
-            <h1 class="card__title"></h1>
-            <h2 class="card__author">Chuck Palahniuk</h2>
-            <h2 class="card__pages">208</h2>
-            <h2 class="card__read">Read</h2>
+            <h1 class="card__title">${book.title}</h1>
+            <h2 class="card__author">${book.author}</h2>
+            <h2 class="card__pages">${book.pages}</h2>
+            <h2 class="card__read">${book.read}</h2>
             <button class="btn">Remove</button>
-        `
+        `;
+        cardSection.appendChild(bookCard);
     }
 
 }
