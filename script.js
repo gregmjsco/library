@@ -24,9 +24,12 @@ function addBookToLibrary() {
     console.log(myLibrary);
 }
 
-const testBook = new Book('The Win', 'Misa', 342, 'is read');
+const testBook = new Book('The Walk', 'Misa', 342, 'is read');
 myLibrary.push(testBook);
 
 console.log(myLibrary);
 
-const container = document.querySelector('#container');     
+const container = document.querySelector('#container');   
+
+const addBookButton = document.querySelector('.add-book-button');
+addBookButton.addEventListener('click', addBookToLibrary);
