@@ -23,4 +23,6 @@ button {
     width: 300px;
     background-color: #000;
     color: #fff;
+    padding: 16px;
+    border-radius: 10px;
 }
