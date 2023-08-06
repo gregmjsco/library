@@ -5,7 +5,7 @@ function Book (title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
+    this.read = Boolean(read);
 }
 
 Book.prototype.showInfo = function() {
@@ -13,11 +13,20 @@ Book.prototype.showInfo = function() {
     return info;
 };
 
+Book.prototype.toggleRead = function() {
+    this.read = !this.read;
+  };
+
+  function toggleRead(index) {
+    myLibrary[index].toggleRead();
+    render();
+  }
+
 function addBookToLibrary() {
     let titleValue = document.getElementById('book-title').value;
     let authorValue = document.getElementById('book-author').value;
     let pagesValue = document.getElementById('book-pages').value;
-    let readValue = document.getElementById('book-read').value;
+    let readValue = document.getElementById('book-read').checked;
 
 
     let bookToAdd = new Book(titleValue, authorValue, pagesValue, readValue);
@@ -37,16 +46,24 @@ function renderCard() {
         bookCard.innerHTML = `
             <h1 class="card__title">${book.title}</h1>
             <h2 class="card__author">${book.author}</h2>
-            <h2 class="card__pages">${book.pages}</h2>
+            <h2 class="card__pages">${book.pages} pages</h2>
             <h2 class="card__read">${book.read}</h2>
-            <button class="btn">Remove</button>
+            <button class="btn remove-book-button" onclick="removeBook(${i})">Remove</button>
         `;
         cardSection.appendChild(bookCard);
     }
 
 }
 
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    renderCard();
+}
+
 const container = document.querySelector('#container');   
 
 const addBookButton = document.querySelector('.add-book-button');
 addBookButton.addEventListener('click', addBookToLibrary);
+
+const removeBookButton = document.querySelector('.remove-book-button');
+removeBookButton.addEventListener('click', removeBook()); 

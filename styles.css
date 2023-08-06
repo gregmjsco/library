@@ -10,6 +10,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: #1D153D;
 }
 
 button {
@@ -22,13 +23,14 @@ button {
 .header {
     width: 600px;
     margin: 0 auto;
+    color: #fff;
 }
 
 #card-container {
     display: flex;
     width: 800px;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -36,12 +38,32 @@ button {
 .form {
     width: 500px;
     margin: 0 auto;
+    color: #fff;
 }
 
 .card {
     width: 300px;
-    background-color: #000;
+    background-color: #A5668B;
     color: #fff;
     padding: 16px;
+    border-radius: 20px;
+}
+
+.card__title {
+    text-transform: capitalize;
+}
+
+.card__author {
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.btn {
+    background-color: #86A5D9;
+    color: black;
+    padding: 8px 16px;
     border-radius: 10px;
+    font-weight: 700;
+    margin-top: 16px;
+    
 }
