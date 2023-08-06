@@ -20,15 +20,21 @@ button {
     color: inherit;
 }
 
+label {
+    font-family: inherit;
+}
+
 .header {
     width: 600px;
-    margin: 0 auto;
+    margin: 30px auto;
     color: #fff;
+    text-align: center;
 }
 
 #card-container {
+    margin: 30px auto;
     display: flex;
-    width: 800px;
+    width: 1200px;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -37,7 +43,7 @@ button {
 
 .form {
     width: 500px;
-    margin: 0 auto;
+    margin: 30px auto;
     color: #fff;
 }
 
@@ -56,6 +62,14 @@ button {
 .card__author {
     font-weight: 300;
     text-transform: capitalize;
+}
+
+.card__pages {
+    font-weight: 300;
+}
+
+.card__read {
+    font-weight: 300;
 }
 
 .btn {
