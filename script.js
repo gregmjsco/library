@@ -3,10 +3,10 @@ let myLibrary = [];
 const container = document.querySelector('#container');   
 
 const addBookButton = document.querySelector('.add-book-button');
-addBookButton.addEventListener('click', addBookToLibrary());
+
 
 const removeBookButton = document.querySelector('.remove-book-button');
-removeBookButton.addEventListener('click', removeBook()); 
+
 
 
 
@@ -64,11 +64,13 @@ function renderCard() {
 }
 }
 
-function removeBook() {
+function removeBook(index) {
     myLibrary.splice(index, 1);
-    renderCard();
+        renderCard();
 }
 
+addBookButton.addEventListener('click', addBookToLibrary());
+removeBookButton.addEventListener('click', removeBook()); 
 /*
 function Book (title, author, pages, read) {
     this.title = title;
