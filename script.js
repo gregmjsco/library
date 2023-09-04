@@ -79,6 +79,14 @@ const container = document.querySelector('#container');
 const addBookButton = document.querySelector('.add-book-button');
 addBookButton.addEventListener('click', addBookToLibrary);
 
+const title = document.getElementById('book-title');
 
+title.addEventListener('input', (e) => {
+    if (title.validity.typeMismatch) {
+        title.setCustomValidity("Enter a book title")
+    } else {
+        title.setCustomValidity("");
+    }
+})
 
 
