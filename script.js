@@ -89,4 +89,25 @@ title.addEventListener('input', (e) => {
     }
 })
 
+const form = document.querySelector("form");
+const titleError = document.querySelector("#book-title + span.error");
+
+form.addEventListener("submit", (event) => {
+    if (!title.validity.valid) {
+        showError();
+        event.preventDefault(); 
+    }
+});
+
+function showError() {
+    if (title.validity.valueMissing) {
+        titleError.textContent = "You need to enter a title";
+    } else if (title.validity.typeMismatch) {
+        titleError.textContent = "Enter valid title";
+    } else if (title.validity.tooShort) {
+        titleError.textContent = "Title too short"
+    }
+}
+
+titleError.className = "error active";
 
