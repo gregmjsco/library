@@ -93,6 +93,7 @@ const form = document.querySelector("form");
 const titleError = document.querySelector("#book-title + span.error");
 
 form.addEventListener("submit", (event) => {
+    console.log("Form submit button pressed")
     if (!title.validity.valid) {
         showError();
         event.preventDefault(); 
